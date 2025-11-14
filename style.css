@@ -1,0 +1,222 @@
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-top: 0;
+}
+
+.visualization-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+#visualization-container, #polynomial-graph-container {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+}
+
+h3 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+canvas {
+    width: 100%;
+    height: 400px;
+    border-radius: 4px;
+}
+
+#controls-container {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.polynomial-display {
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.equation {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    font-family: 'Computer Modern', Georgia, serif;
+}
+
+.control-group {
+    margin-bottom: 2rem;
+}
+
+.button-group {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#reset-btn {
+    background-color: #e74c3c;
+}
+
+#reset-btn:hover {
+    background-color: #c0392b;
+}
+
+.info {
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.info h2 {
+    margin-top: 0;
+    font-size: 1.2rem;
+}
+
+.info ul {
+    padding-left: 1.5rem;
+}
+
+.info li {
+    margin-bottom: 0.5rem;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #7f8c8d;
+    font-size: 0.9rem;
+}
+
+/* Triangulations display styling */
+.triangulations-container {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.triangulations-container h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.explanation {
+    text-align: center;
+    color: #7f8c8d;
+    margin-top: 1.5rem;
+    font-style: italic;
+}
+
+.triangulation-svg {
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.triangulation-svg:hover {
+    transform: scale(1.05);
+}
+
+.triangulation-svg.active {
+    box-shadow: 0 0 8px #3498db;
+    border-radius: 8px;
+    background-color: #ecf0f1;
+}
+
+/* Math explanation styling */
+.math-explanation {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.math-explanation h2 {
+    text-align: center;
+    color: #2c3e50;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+
+.math-content {
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.equation {
+    text-align: center;
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+}
+
+#polynomial-graph-container {
+    background: white;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: relative;
+    min-height: 450px; /* Ensure enough height for the plot */
+}
+
+#polynomial-canvas {
+    width: 100% !important;
+    height: 400px !important;
+}
+
+#step-slider {
+    width: 100%;
+    margin: 10px 0;
+}
+
+@media (max-width: 1024px) {
+    .visualization-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    canvas {
+        height: 300px;
+    }
+} 

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalan Numbers and Polynomial Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Catalan Numbers and Polynomial Solutions</h1>
+        <p class="subtitle">Visualizing how Catalan numbers solve polynomial equations through hexagon triangulations</p>
+    </header>
+    <main>
+        <div class="triangulations-container">
+            <h2>Hexagon Triangulations and Catalan Numbers</h2>
+            <div id="hexagon-display"></div>
+            <p class="explanation">Figure 1: \(C_4 = 14\) ways to subdivide a roofed hexagon into four triangles.</p>
+        </div>
+
+        <div class="math-explanation">
+            <h2>The Catalan Series Solution</h2>
+            <div class="math-content">
+                <p>To see how the Catalan numbers relate to quadratic equations, consider</p>
+                <div class="equation">\[1 - \alpha + t\alpha^2 = 0 \quad (2)\]</div>
+                <p>which according to the quadratic formula has the solution in radicals:</p>
+                <div class="equation">\[\alpha = \frac{1}{2t}(1 \pm \sqrt{1-4t}).\]</div>
+                <p>Applying Newton's binomial expansion to the minus sign solution reveals the generating series of the Catalan numbers as the formal power series solution:</p>
+                <div class="equation">\[\alpha = \sum_{n\geq 0}\frac{(2n)!}{n!(n+1)!}t^n = \sum_{n\geq 0}C_n t^n.\]</div>
+                <p>The result justifies the lovely identity:</p>
+                <div class="equation">\[(1 + t + 2t^2 + 5t^3 + 14t^4 + 42t^5 + \cdots)^2 = 1 + 2t + 5t^2 + 14t^3 + 42t^4 + \cdots.\]</div>
+            </div>
+        </div>
+
+        <div class="visualization-grid">
+            <div id="visualization-container">
+                <h3>Geometric Interpretation</h3>
+                <canvas id="render-canvas"></canvas>
+            </div>
+            <div id="polynomial-graph-container">
+                <h3>Polynomial and Catalan Series</h3>
+                <div id="polynomial-canvas" style="width:100%; height:400px;"></div>
+            </div>
+        </div>
+
+        <div id="controls-container">
+            <div class="polynomial-display">
+                <h2>Exploring the Solution</h2>
+                <p>For \(t = 1\), the equation \(1-\alpha+\alpha^2 = 0\) has the solution \(\alpha = \frac{1}{2}(1 - \sqrt{-3})\)</p>
+                <p>The Catalan series gives us \(\alpha = \sum_{n\geq 0}C_n\), which converges to the same solution</p>
+            </div>
+            <div class="control-group">
+                <h2>Triangulation Pattern</h2>
+                <label for="step-slider">Pattern:</label>
+                <input type="range" id="step-slider" name="step-slider" min="0" max="100" value="0">
+                <span id="step-label">Pattern 1 of 14</span>
+            </div>
+            <div class="button-group">
+                <button id="prev-step-btn">Previous</button>
+                <button id="next-step-btn">Next</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Based on "A Hyper-Catalan Series Solution to Polynomial Equations, and the Geode" by Norman Wildberger and Dean Rubine</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html> 
