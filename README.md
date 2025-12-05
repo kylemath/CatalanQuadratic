@@ -1,5 +1,7 @@
 # Polynomial Solutions via Hexagon Triangulation
 
+🚀 **[Live Demo](https://kylemath.github.io/CatalanQuadratic)** 🚀
+
 ## Description
 An interactive web application visualizing the connection between hexagon triangulations and polynomial solutions, inspired by the paper "A Hyper-Catalan Series Solution to Polynomial Equations, and the Geode" by Norman Wildberger and Dean Rubine. This application provides an intuitive geometric interpretation of how polynomial solutions relate to triangulations of regular polygons.
 
