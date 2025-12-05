@@ -1,0 +1,11 @@
+{
+  "id": "CatalanQuadratic",
+  "title": "CatalanQuadratic",
+  "oneLiner": "Polynomial Solutions via Hexagon Triangulation",
+  "demoUrl": "https://kylemath.github.io/CatalanQuadratic",
+  "screenshot": "https://raw.githubusercontent.com/kylemath/CatalanQuadratic/main/screenshot.png",
+  "kind": "project",
+  "categories": ["mathematics", "geometry", "webdemo"],
+  "tags": ["mathematics", "geometry", "webdemo"],
+  "status": "published"
+}
